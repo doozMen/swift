@@ -9,6 +9,9 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.3"),
+    // points to https://github.com/calda/SwiftFormat/releases/tag/0.51-beta-3 as the tag could not be used in that format
+    // swiftformat is included directly to be able to support linux too
+    .package(url: "https://github.com/calda/SwiftFormat", revision: "b9aa1814747d37c86fd1553d8dfefbe7557f8c34"),
   ],
   targets: [
     .plugin(
@@ -22,7 +25,7 @@ let package = Package(
         ]),
       dependencies: [
         "AirbnbSwiftFormatTool",
-        "SwiftFormat",
+        .product(name: "swiftformat", package: "SwiftFormat"),
         "SwiftLintBinary",
       ]),
 
@@ -35,12 +38,6 @@ let package = Package(
         .process("airbnb.swiftformat"),
         .process("swiftlint.yml"),
       ]),
-
-    .binaryTarget(
-      name: "SwiftFormat",
-      url: "https://github.com/calda/SwiftFormat/releases/download/0.51-beta-3/SwiftFormat.artifactbundle.zip",
-      checksum: "4b0516d911258b55c3960949f4a516a246f35a1dc7647a6440c66e1f1fe1a32e"),
-
     .binaryTarget(
       name: "SwiftLintBinary",
       url: "https://github.com/realm/SwiftLint/releases/download/0.48.0/SwiftLintBinary-macos.artifactbundle.zip",

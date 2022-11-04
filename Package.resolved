@@ -8,6 +8,14 @@
         "revision" : "e394bf350e38cb100b6bc4172834770ede1b7232",
         "version" : "1.0.3"
       }
+    },
+    {
+      "identity" : "swiftformat",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/calda/SwiftFormat",
+      "state" : {
+        "revision" : "b9aa1814747d37c86fd1553d8dfefbe7557f8c34"
+      }
     }
   ],
   "version" : 2
