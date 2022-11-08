@@ -30,6 +30,9 @@ struct AirbnbSwiftFormatTool: ParsableCommand {
 
   @Flag(help: "When true, logs the commands that are executed")
   var log = false
+  
+  @Flag(help: "When true, performs format with option lint")
+  var check = false
 
   @Option(help: "The absolute path to the SwiftFormat config file")
   var swiftFormatConfig = Bundle.module.path(forResource: "airbnb", ofType: "swiftformat")!
@@ -82,7 +85,7 @@ struct AirbnbSwiftFormatTool: ParsableCommand {
       arguments += ["--cache", swiftFormatCachePath]
     }
 
-    if lint {
+    if lint || check {
       arguments += ["--lint"]
     }
 
@@ -109,7 +112,7 @@ struct AirbnbSwiftFormatTool: ParsableCommand {
       arguments += ["--cache-path", swiftLintCachePath]
     }
 
-    if !lint {
+    if !(lint || check) {
       arguments += ["--fix"]
     }
 

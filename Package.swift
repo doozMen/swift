@@ -12,7 +12,7 @@ let package = Package(
     // points to https://github.com/calda/SwiftFormat/releases/tag/0.51-beta-3 as the tag could not be used in that format
     // swiftformat is included directly to be able to support linux too
     .package(url: "https://github.com/calda/SwiftFormat", revision: "b9aa1814747d37c86fd1553d8dfefbe7557f8c34"),
-    .package(url: "https://github.com/realm/SwiftLint", branch: "main"),
+    .package(url: "https://github.com/realm/SwiftLint", revision: "57dc1c9532d660ff547dd8ba2176ad82c1175787"),
   ],
   targets: [
     .plugin(
