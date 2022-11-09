@@ -22,8 +22,8 @@ let package = Package(
         ]),
       dependencies: [
         "AirbnbSwiftFormatTool",
-        "SwiftFormat",
-        "SwiftLintBinary",
+        "swiftformat",
+        "swiftlint",
       ]),
 
     .executableTarget(
@@ -37,12 +37,11 @@ let package = Package(
       ]),
 
     .binaryTarget(
-      name: "SwiftFormat",
-      url: "https://github.com/calda/SwiftFormat/releases/download/0.51-beta-3/SwiftFormat.artifactbundle.zip",
-      checksum: "4b0516d911258b55c3960949f4a516a246f35a1dc7647a6440c66e1f1fe1a32e"),
-
+      name: "swiftformat",
+      url: "https://github.com/doozMen/SwiftFormat/releases/download/0.51-beta4/swiftformat.artifactbundle.zip",
+      checksum: "325a01367ba959f9ba1eaf0f8e8b43a224a81ea8c55cfd0f005afd4e00a70c1b"),
     .binaryTarget(
-      name: "SwiftLintBinary",
+      name: "swiftlint",
       url: "https://github.com/doozMen/SwiftLint/releases/download/0.49.1/swiftlint.artifactbundle.zip",
-      checksum: "71c3b309e7a52fece109b5ab0d81f826a5e5bc0202035e6228d5956f24acdb49"),
+      checksum: "aefc21b6d9311ed3e29042ae22c815506d8b0c7c2a8cfe9995ae6e813db4b5e4"),
   ])
