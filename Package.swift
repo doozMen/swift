@@ -43,5 +43,5 @@ let package = Package(
     .binaryTarget(
       name: "swiftlint",
       url: "https://github.com/doozMen/SwiftLint/releases/download/0.49.1/swiftlint.artifactbundle.zip",
-      checksum: "aefc21b6d9311ed3e29042ae22c815506d8b0c7c2a8cfe9995ae6e813db4b5e4"),
+      checksum: "5a4a63a2fa22020da781c459336e17fefdb27baf54ab93fc76e340f5484b8483"),
   ])
