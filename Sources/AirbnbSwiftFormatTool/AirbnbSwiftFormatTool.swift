@@ -30,7 +30,7 @@ struct AirbnbSwiftFormatTool: ParsableCommand {
 
   @Flag(help: "When true, logs the commands that are executed")
   var log = false
-  
+
   @Flag(help: "When true, performs format with option lint")
   var check = false
 
