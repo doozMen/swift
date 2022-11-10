@@ -39,7 +39,7 @@ let package = Package(
     .binaryTarget(
       name: "swiftformat",
       url: "https://github.com/doozMen/SwiftFormat/releases/download/0.51-beta4/swiftformat.artifactbundle.zip",
-      checksum: "f11b4e78fae995a211df87f0bf89f00bbccfecae42074d20e2b8e15b296200dd"),
+      checksum: "0255d8db7a8955467e7e548f9fbeda489fe0d5084d59d5144e662eb9e0bdc3d4"),
     .binaryTarget(
       name: "swiftlint",
       url: "https://github.com/doozMen/SwiftLint/releases/download/0.49.1/swiftlint.artifactbundle.zip",
